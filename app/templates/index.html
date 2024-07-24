@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--=============== BOXICONS ===============-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href=./static/index.css>
+
+        <title>Walk Together</title>
+    </head>
+    <body>
+        <!--=============== HEADER ===============-->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#" class="nav__logo">W_Together</a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link active-link">Home</a>
+                        </li>
+                        
+                        <li class="nav__item">
+                            <a href="#services" class="nav__link">Services</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link">About us</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#contact" class="nav__link">Contact us</a>
+                        </li>
+
+                        <i class='bx bx-toggle-left change-theme' id="theme-button"></i>
+                    </ul>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-grid-alt'></i>
+                </div>
+
+                <a href="{{ url_for('login') }}" class="button button__header">Login</a>
+            </nav>
+        </header>
+
+        <main class="main">
+            <!--=============== HOME ===============-->
+            <section class="home section" id="home">
+                <div class="home__container container grid">
+                    <img src="{{ url_for('static', filename='images/dolist.png') }}" class="svg__img" alt="Doing Task">
+                    <div class="home__data">
+                        <h1 class="home__title">Walk <br> Together</h1>
+                        <p class="home__description">Dynamic platform where users transform productivity into a game. By completing tasks, users earn points, unlocking opportunities to participate in exciting challenges. As they accumulate points, they can even create their own challenges, engaging and inspiring the community to achieve more together.</p>
+
+                        <a href="{{ url_for('register') }}" class="button">Get Started</a>
+
+                    </div>   
+                    
+                </div>
+            </section>
+
+           
+
+            <!--=============== SECURITY ===============-->
+            <section class="security section container">
+                <div class="security__container grid">
+                    <div class="security__data">
+                        <h2 class="section__title-center">Your Safety Is <br> Important</h2>
+                        <p class="security__description">app provides a safe and inspiring community for you to achieve greatness and create unforgettable experiences.
+                        </p>
+                    </div>
+
+                    <img src="{{ url_for('static', filename='images/security.png') }}" class="svg__img" alt="security">
+                </div>
+            </section>
+          
+            <!--=============== SERVICES ===============-->
+            <section class="services section container" id="services">
+                <h2 class="section__title">Some Services We <br> Offer</h2>
+                <div class="services__container grid">
+                    <div class="services__data">
+                        <h3 class="services__subtitle">Task Management</h3>
+                        <p class="services__description"> Transform everyday tasks into engaging missions.</p>
+                    </div>
+
+                    <div class="services__data">
+                        <h3 class="services__subtitle">Motivation</h3>
+        
+                        <p class="services__description">Track your progress, earn rewards, and stay motivated to achieve your goals.</p>
+                    </div>
+
+                    <div class="services__data">
+                        <h3 class="services__subtitle">Personal Growth & Development</h3>
+                        <p class="services__description"> Take charge of your personal growth with tailored challenges designed to push your boundaries and help you discover new skills and passions.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!--=============== next ===============-->
+            <section class="app section container">
+                <div class="app__container grid">
+                    <div class="app__data">
+                        <h2 class="section__title-center">Next <br> ------>Step</h2>
+                        <p class="app__description"></p>
+                    </div>
+
+                    <img src="{{ url_for('static', filename='images/step.png') }}" class="svg__img" alt="step">
+                    Our next step is to build a vibrant hub where users can share their daily progress and spark inspiring conversations with fellow achievers. This dynamic space will fuel motivation and cultivate a thriving community of go-getters.
+                </div>
+            </section>
+
+               <!--=============== ABOUT ===============-->
+               <section class="about section container" id="about">
+                <div class="about__container grid">
+                    <div class="about__data">
+                        <h2 class="section__title-center">Find Out A Little More <br> About Us</h2>
+                        <p class="about__description">As the visionary developer behind the Task Challenge App, I am dedicated to transforming everyday tasks into exciting opportunities for growth and engagement. With a passion for blending technology and motivation, I designed this app to inspire users to accomplish more, challenge themselves, and connect with others in a dynamic and rewarding way. My goal is to create a platform where productivity meets adventure, making every achievement a stepping stone to new possibilities.</p>
+                    </div>
+                    <img src="{{ url_for('static', filename='images/me2.png') }}" class="svg__img" alt="me">
+                </div>
+            </section>
+
+            <!--=============== CONTACT US ===============-->
+            <section class="contact section container" id="contact">
+                <div class="contact__container grid">
+                    <div class="contact__content">
+                        <h2 class="section__title-center">Contact Us From <br> Here</h2>
+                        <p class="contact__description">You can contact us from here, you can write to us, 
+                            call us or visit our service center, we will gladly assist you.</p>
+                    </div>
+
+                    <ul class="contact__content grid">
+                        <li class="contact__address">Telephone: <span class="contact__information">+2126589056</span></li>
+                        <li class="contact__address">Email:  <span class="contact__information">W_Together@email.com</span></li>
+                        <li class="contact__address">Location: <span class="contact__information">Fez - Morocco</span></li>
+                    </ul>
+
+                    <div class="contact__content">
+                        <a href="#" class="button">Contact Us</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!--=============== FOOTER ===============-->
+        <footer class="footer section">
+            <div class="footer__container container grid">
+                <div class="footer__content">
+                    <a href="#" class="footer__logo">W_Together</a>
+                    <p class="footer__description">Do your work<br> Easier</p>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Our Services</h3>
+                    <ul class="footer__links">
+                        <li><a href="#" class="footer__link">Pricing </a></li>
+                        <li><a href="#" class="footer__link">Discounts</a></li>
+                        <li><a href="#" class="footer__link">Report a bug</a></li>
+                        <li><a href="#" class="footer__link">Terms of Service</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__c class="footer__link">Get in touch</a></li>
+                    </ul>ontent">
+                    <h3 class="footer__title">Our Company</h3>
+                    <ul class="footer__links">
+                        <li><a href="#" class="footer__link">Blog</a></li>
+                        <li><a href="#" class="footer__link">Our mision</a></li>
+                        <li><a href="#"
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Community</h3>
+                    <ul class="footer__links">
+                        <li><a href="#" class="footer__link">Support</a></li>
+                        <li><a href="#" class="footer__link">Questions</a></li>
+                        <li><a href="#" class="footer__link">Customer help</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__social">
+                    <a href="#" class="footer__social-link"><i class='bx bxl-facebook-circle '></i></a>
+                    <a href="#" class="footer__social-link"><i class='bx bxl-twitter'></i></a>
+                    <a href="#" class="footer__social-link"><i class='bx bxl-instagram-alt'></i></a>
+                </div>
+            </div>
+
+            <p class="footer__copy">&#169; W_Together. All right reserved</p>
+        </footer>
+
+        <!--=============== SCROLL UP ===============-->
+        <a href="#" class="scrollup" id="scroll-up">
+            <i class='bx bx-up-arrow-alt scrollup__icon'></i>
+        </a>
+
+        <!--=============== INDEX JS ===============-->
+        <script src="../javascript/index.js"></script>
+    </body>
+</html>
